@@ -1,4 +1,5 @@
-Problem Statement 1. Please mention true or false for the below statements: a) Prescriptive Analytics is used to predict the future outcomes b) Base R packages are installed automatically 
+ Problem Statement 1. Please mention true or false for the below statements: a) Prescriptive Analytics is used to predict the 
+ future outcomes b) Base R packages are installed automatically 
 
 2.  What is Recycling of elements   in a vector? 
   
@@ -8,5 +9,26 @@ Answers:
 1. a) False (Predictive analytics is used to predict future outcomes.)
 b) True.
 
-2. Recycling topic not covered in the session.
-3. Recycling topic not covered in the session.
+2. When we apply any operation on two vectors, which are not of same length R automatically repeats elements of shorter vector, 
+untill the length og shorter vector is same the long vector. Because to perform any operation on two vectors in R, both the vectors should
+be of same length.
+
+3. Example of recycling.
+Suppose we have two vectors of different lengths a and b. And we are taking sum of these two vector in vector c.
+vector c will be of same length as longer vector a. 
+a <- c(1, 4, 3, 6, 8)
+b <- c(2, 3)
+c<- a+b
+
+o/p is
+> c
+[1]  3  7  5  9 10
+
+R is repeating the elements of vector of b to make its length same as vector a as follows:
+
+>c
+1+2 =3
+4+3 =7
+3+2 = 5
+6+3 = 9
+8+2 =10
